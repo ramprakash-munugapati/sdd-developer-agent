@@ -23,13 +23,21 @@
     {
       "id": "TASK-002",
       "title": "Implement /api/status endpoint (REQ-A3)",
-      "status": "planned",
+      "status": "completed",
+      "completedAt": "2026-10-09T17:15:00Z",
       "dependencies": ["TASK-001"],
       "validation": {
         "type": "checkstyle+test+coverage",
         "threshold": {
           "lineCoverage": 80
         }
+      },
+      "evidence": {
+        "junitXml": "target/surefire-reports/TEST-com.example.auth.StatusControllerTest.xml",
+        "testCount": 1,
+        "testSucceded": true,
+        "checkstyleResult": "target/checkstyle-result.xml (0 violations)",
+        "coverageLinePct": null
       }
     },
     {
