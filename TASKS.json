@@ -1,0 +1,48 @@
+{
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "title": "Implement user authentication (REQ-A1, REQ-A2)",
+      "status": "completed",
+      "completedAt": "2026-10-09T17:00:00Z",
+      "dependencies": [],
+      "validation": {
+        "type": "checkstyle+test+coverage",
+        "threshold": {
+          "lineCoverage": 80
+        }
+      },
+      "evidence": {
+        "junitXml": "target/surefire-reports/TEST-com.example.auth.AuthApplicationTest.xml",
+        "testCount": 1,
+        "testSucceded": true,
+        "checkstyleResult": "target/checkstyle-result.xml (0 violations)",
+        "coverageLinePct": null
+      }
+    },
+    {
+      "id": "TASK-002",
+      "title": "Implement /api/status endpoint (REQ-A3)",
+      "status": "planned",
+      "dependencies": ["TASK-001"],
+      "validation": {
+        "type": "checkstyle+test+coverage",
+        "threshold": {
+          "lineCoverage": 80
+        }
+      }
+    },
+    {
+      "id": "TASK-003",
+      "title": "Implement authentication event logging (REQ-A4)",
+      "status": "planned",
+      "dependencies": ["TASK-001"],
+      "validation": {
+        "type": "checkstyle+test+coverage",
+        "threshold": {
+          "lineCoverage": 80
+        }
+      }
+    }
+  ]
+}
